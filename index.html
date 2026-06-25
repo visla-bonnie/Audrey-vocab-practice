@@ -19,70 +19,58 @@
       --shadow: 0 10px 30px rgba(37, 99, 235, 0.08);
       --radius: 18px;
     }
-
     * { box-sizing: border-box; }
-
     body {
       margin: 0;
       font-family: Arial, Helvetica, sans-serif;
       color: var(--text);
       background: linear-gradient(180deg, #eef4ff 0%, #f8fbff 45%, #f6f8fc 100%);
     }
-
     .wrap {
       max-width: 1040px;
       margin: 0 auto;
       padding: 22px;
     }
-
     .hero, .card {
       background: var(--card);
       border: 1px solid var(--border);
       border-radius: 24px;
       box-shadow: var(--shadow);
     }
-
     .hero {
       padding: 24px;
       margin-bottom: 18px;
       background: linear-gradient(135deg, #dbeafe 0%, #ffffff 58%, #ccfbf1 100%);
     }
-
     h1 {
       margin: 0 0 8px;
       font-size: 2rem;
     }
-
     h2 {
       margin: 0 0 12px;
       font-size: 1.2rem;
     }
-
     .sub {
       margin: 0;
       color: var(--muted);
       line-height: 1.55;
     }
-
     .card {
       padding: 18px;
       margin-bottom: 18px;
     }
-
     .toolbar {
       display: grid;
       grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
       gap: 12px;
       margin-top: 18px;
     }
-
     label {
       display: block;
       font-size: 0.95rem;
       font-weight: 700;
       margin-bottom: 8px;
     }
-
     select, button, input {
       width: 100%;
       border-radius: 12px;
@@ -91,11 +79,9 @@
       border: 1px solid #c9d6ea;
       background: #fff;
     }
-
     input[type="text"] {
       font-size: 1.05rem;
     }
-
     button {
       border: none;
       background: var(--accent);
@@ -104,7 +90,6 @@
       font-weight: 700;
       transition: transform 0.12s ease, opacity 0.12s ease;
     }
-
     button:hover { transform: translateY(-1px); }
     button.secondary { background: var(--accent2); }
     button.gray { background: #475569; }
@@ -114,32 +99,27 @@
       border: 1px solid #bfdbfe;
     }
     button.warning { background: #f59e0b; color: #111827; }
-
     .stats {
       display: grid;
       grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
       gap: 12px;
       margin-top: 16px;
     }
-
     .stat {
       background: #fff;
       border-radius: 14px;
       padding: 12px 14px;
       border: 1px solid var(--border);
     }
-
     .stat .label {
       color: var(--muted);
       font-size: 0.86rem;
       margin-bottom: 4px;
     }
-
     .stat .value {
       font-weight: 800;
       font-size: 1.2rem;
     }
-
     .question-type {
       color: var(--accent);
       font-size: 0.9rem;
@@ -148,24 +128,20 @@
       letter-spacing: 0.04em;
       margin-bottom: 8px;
     }
-
     .question-word {
       font-size: 2rem;
       font-weight: 800;
       margin-bottom: 10px;
     }
-
     .question-prompt {
       font-size: 1.08rem;
       line-height: 1.55;
       margin-bottom: 16px;
     }
-
     .choices {
       display: grid;
       gap: 10px;
     }
-
     .choice-btn {
       text-align: left;
       background: #fff;
@@ -173,19 +149,16 @@
       border: 1px solid var(--border);
       font-weight: 600;
     }
-
     .choice-btn.correct {
       background: #ecfdf5;
       border-color: #86efac;
       color: var(--good);
     }
-
     .choice-btn.wrong {
       background: #fef2f2;
       border-color: #fca5a5;
       color: var(--bad);
     }
-
     .feedback {
       display: none;
       margin-top: 14px;
@@ -194,21 +167,17 @@
       line-height: 1.55;
       border: 1px solid transparent;
     }
-
     .feedback.show { display: block; }
     .feedback.good { background: #ecfdf5; color: var(--good); border-color: #86efac; }
     .feedback.bad { background: #fef2f2; color: var(--bad); border-color: #fca5a5; }
     .feedback.note { background: #fff7ed; color: var(--warning); border-color: #fdba74; display: block; }
-
     .row {
       display: flex;
       flex-wrap: wrap;
       gap: 10px;
       margin-top: 16px;
     }
-
     .row > * { flex: 1; min-width: 150px; }
-
     .pill {
       display: inline-block;
       margin: 0 6px 6px 0;
@@ -219,25 +188,21 @@
       font-weight: 700;
       font-size: 0.84rem;
     }
-
     .tiny {
       color: var(--muted);
       font-size: 0.92rem;
       line-height: 1.5;
     }
-
     .review-list {
       display: grid;
       gap: 10px;
     }
-
     .review-item {
       border: 1px solid var(--border);
       border-radius: 14px;
       padding: 12px;
       background: #fff;
     }
-
     .mono {
       font-family: "Courier New", monospace;
       background: #f8fafc;
@@ -245,14 +210,16 @@
       border-radius: 10px;
       padding: 2px 6px;
     }
-
     .footer-note {
       text-align: center;
       color: var(--muted);
       font-size: 0.9rem;
       margin: 18px 0 8px;
     }
-
+    .summer-section {
+      background: linear-gradient(135deg, #fef3c7, #ecfdf5);
+      border: 2px solid #fcd34d;
+    }
     @media (max-width: 640px) {
       .question-word { font-size: 1.6rem; }
       h1 { font-size: 1.6rem; }
@@ -263,7 +230,7 @@
   <div class="wrap">
     <section class="hero">
       <h1>Audrey ERB Vocabulary Practice</h1>
-      <p class="sub">A simple static app for practicing vocabulary from <strong>The Thief Lord</strong>, <strong>13 Gifts</strong>, and <strong>Brendan Buckley’s Universe and Everything in It</strong>. It uses ERB-style multiple choice, context clues, part-of-speech review, best sentence use, and a spelling check mode.</p>
+      <p class="sub">A simple static app for practicing vocabulary from previous books + <strong>Summer Homework</strong> (City of Ember, The Rifle, Sammy Keyes, etc.). Includes ERB-style multiple choice, context clues, part-of-speech, sentence use, and spelling check.</p>
       <div class="toolbar">
         <div>
           <label for="bookFilter">Book Set</label>
@@ -272,6 +239,15 @@
             <option value="The Thief Lord">The Thief Lord</option>
             <option value="13 Gifts">13 Gifts</option>
             <option value="Brendan Buckley’s Universe and Everything in It">Brendan Buckley’s Universe</option>
+            <!-- Summer Homework Books -->
+            <option value="City of Ember">City of Ember</option>
+            <option value="The Rifle">The Rifle</option>
+            <option value="Sammy Keyes and the Hotel Thief">Sammy Keyes</option>
+            <option value="Smiles to Go">Smiles to Go</option>
+            <option value="Time Travelling with a Hamster">Time Travelling with a Hamster</option>
+            <option value="The Winter Room">The Winter Room</option>
+            <option value="Woodsong">Woodsong</option>
+            <option value="Summer Homework">Summer Homework (All New)</option>
           </select>
         </div>
         <div>
@@ -307,6 +283,12 @@
       </div>
     </section>
 
+    <section class="card summer-section">
+      <h2>Summer Homework</h2>
+      <p class="tiny"><strong>New books added:</strong> City of Ember, The Rifle, Sammy Keyes and the Hotel Thief, Smiles to Go, Time Travelling with a Hamster, The Winter Room, Woodsong.</p>
+      <p class="tiny">You can now practice vocabulary from these summer reading books. Essay prompts from the .docx files are listed below for reference.</p>
+    </section>
+
     <section class="card" id="quizCard">
       <div class="question-type" id="questionType">Ready</div>
       <div class="question-word" id="questionWord">Press “Start New Practice”</div>
@@ -331,7 +313,7 @@
     <section class="card">
       <h2>Words Included</h2>
       <div id="wordPills"></div>
-      <p class="tiny">Tip: Start with one book, then switch to <strong>All Books</strong> when Audrey is ready for mixed practice.</p>
+      <p class="tiny">Tip: Start with one book, then switch to <strong>All Books</strong> or <strong>Summer Homework</strong> when ready for mixed practice.</p>
     </section>
 
     <section class="card">
@@ -342,21 +324,32 @@
     </section>
 
     <section class="card">
-      <h2>How to Deploy on GitHub Pages</h2>
-      <div class="tiny">
-        <p>1. Create a new GitHub repo, such as <span class="mono">audrey-vocab-practice</span>.</p>
-        <p>2. Save this file as <span class="mono">index.html</span>.</p>
-        <p>3. Upload it to the repo root and push.</p>
-        <p>4. In GitHub: <span class="mono">Settings → Pages → Deploy from a branch</span>.</p>
-        <p>5. Choose the main branch and root folder. GitHub will publish the app after a short wait.</p>
+      <h2>Summer Homework Essay Prompts (Reference)</h2>
+      <div class="tiny" style="line-height:1.6;">
+        <strong>City of Ember:</strong> Journal entry about why Ember was built OR Persuasive on critical thinking OR Expository on curiosity OR Personal narrative.<br><br>
+        <strong>The Rifle:</strong> Destiny vs chance + author’s view on guns OR Message on gun ownership OR Tragic event lesson OR Personal responsibility narrative.<br><br>
+        <strong>Sammy Keyes:</strong> Explain clues and how Sammy solves the hotel thief mystery (5-paragraph essay).<br><br>
+        <strong>Smiles to Go:</strong> Competition good/bad with chess examples OR Personal competition story.<br><br>
+        <strong>Time Travelling with a Hamster:</strong> Compare Pye & Byron’s views on time travel + Al’s final opinion.<br><br>
+        <strong>The Winter Room:</strong> Describe seasons on the farm OR Farm vs city OR Themes (family, work ethic, etc.) OR Personal appreciation experience.<br><br>
+        <strong>Woodsong:</strong> Lessons from books vs nature (Wordsworth quote) with examples from the book.
       </div>
     </section>
 
-    <p class="footer-note">Static HTML app • Ready for GitHub Pages • Built for Audrey’s vocabulary practice</p>
+    <section class="card">
+      <h2>How to Deploy on GitHub Pages</h2>
+      <div class="tiny">
+        <p>1. Create a new GitHub repo.</p>
+        <p>2. Save this file as <span class="mono">index.html</span>.</p>
+        <p>3. Upload and enable GitHub Pages.</p>
+      </div>
+    </section>
+    <p class="footer-note">Static HTML app • Summer Homework Added • Built for Audrey’s vocabulary + essay practice</p>
   </div>
 
   <script>
     const VOCAB = [
+      // Original books
       { word: 'gondola', book: 'The Thief Lord', partOfSpeech: 'noun', definition: 'a long narrow boat used in Venice canals', sentence: 'The children saw a gondola moving slowly through the water.' },
       { word: 'contemptuous', book: 'The Thief Lord', partOfSpeech: 'adjective', definition: 'showing strong dislike or disrespect', sentence: 'The man gave them a contemptuous look.' },
       { word: 'deftly', book: 'The Thief Lord', partOfSpeech: 'adverb', definition: 'in a quick and skillful way', sentence: 'She deftly tied the ribbon on the box.' },
@@ -367,7 +360,6 @@
       { word: 'canopy', book: 'The Thief Lord', partOfSpeech: 'noun', definition: 'a covering that hangs over something', sentence: 'The trees formed a green canopy above us.' },
       { word: 'dignified', book: 'The Thief Lord', partOfSpeech: 'adjective', definition: 'calm, serious, and worthy of respect', sentence: 'The old man spoke in a dignified voice.' },
       { word: 'conscience', book: 'The Thief Lord', partOfSpeech: 'noun', definition: 'the inner feeling that tells you right or wrong', sentence: 'His conscience told him to tell the truth.' },
-
       { word: 'nefarious', book: '13 Gifts', partOfSpeech: 'adjective', definition: 'very wicked or evil', sentence: 'The villain had a nefarious plan.' },
       { word: 'superstitious', book: '13 Gifts', partOfSpeech: 'adjective', definition: 'believing that certain actions bring good or bad luck', sentence: 'He felt superstitious about walking under a ladder.' },
       { word: 'emanate', book: '13 Gifts', partOfSpeech: 'verb', definition: 'to come out from a source', sentence: 'The smell of cookies began to emanate from the oven.' },
@@ -381,7 +373,6 @@
       { word: 'embody', book: '13 Gifts', partOfSpeech: 'verb', definition: 'to show or represent an idea or quality', sentence: 'She tries to embody kindness in her actions.' },
       { word: 'entwined', book: '13 Gifts', partOfSpeech: 'verb', definition: 'twisted or wrapped together', sentence: 'The vines were entwined around the fence.' },
       { word: 'convey', book: '13 Gifts', partOfSpeech: 'verb', definition: 'to carry or deliver something', sentence: 'The truck will convey the boxes to the new house.' },
-
       { word: 'universe', book: 'Brendan Buckley’s Universe and Everything in It', partOfSpeech: 'noun', definition: 'everything that exists, including stars and planets', sentence: 'Brendan asks many questions about the universe.' },
       { word: 'reflection', book: 'Brendan Buckley’s Universe and Everything in It', partOfSpeech: 'noun', definition: 'an image seen in a mirror or water', sentence: 'He saw his reflection in the window.' },
       { word: 'taunt', book: 'Brendan Buckley’s Universe and Everything in It', partOfSpeech: 'verb', definition: 'to tease or make fun of someone', sentence: 'The boys tried to taunt Brendan.' },
@@ -396,7 +387,101 @@
       { word: 'perseverance', book: 'Brendan Buckley’s Universe and Everything in It', partOfSpeech: 'noun', definition: 'continuing to try even when something is hard', sentence: 'Brendan showed perseverance in his research.' },
       { word: 'lurch', book: 'Brendan Buckley’s Universe and Everything in It', partOfSpeech: 'verb', definition: 'to move suddenly or unevenly', sentence: 'The bus gave a sudden lurch.' },
       { word: 'celebration', book: 'Brendan Buckley’s Universe and Everything in It', partOfSpeech: 'noun', definition: 'a special event for happiness or success', sentence: 'The family had a celebration after the good news.' },
-      { word: 'tingle', book: 'Brendan Buckley’s Universe and Everything in It', partOfSpeech: 'verb', definition: 'to feel a slight prickling or exciting feeling', sentence: 'His hands began to tingle with excitement.' }
+      { word: 'tingle', book: 'Brendan Buckley’s Universe and Everything in It', partOfSpeech: 'verb', definition: 'to feel a slight prickling or exciting feeling', sentence: 'His hands began to tingle with excitement.' },
+
+      // ==================== SUMMER HOMEWORK VOCAB ====================
+      // City of Ember
+      { word: 'confirm', book: 'City of Ember', partOfSpeech: 'verb', definition: 'to verify or make sure something is true', sentence: 'Lina needed to confirm her discovery before telling anyone.' },
+      { word: 'urgent', book: 'City of Ember', partOfSpeech: 'adjective', definition: 'requiring immediate action', sentence: 'The message seemed very urgent.' },
+      { word: 'generator', book: 'City of Ember', partOfSpeech: 'noun', definition: 'a machine that produces electricity', sentence: 'The city relied on the old generator for power.' },
+      { word: 'anticipation', book: 'City of Ember', partOfSpeech: 'noun', definition: 'excitement about something that is going to happen', sentence: 'There was great anticipation on Assignment Day.' },
+      { word: 'fascinate', book: 'City of Ember', partOfSpeech: 'verb', definition: 'to attract and hold attention', sentence: 'The mysterious paper began to fascinate Lina.' },
+      { word: 'proceed', book: 'City of Ember', partOfSpeech: 'verb', definition: 'to continue or move forward', sentence: 'They decided to proceed with their plan.' },
+      { word: 'authority', book: 'City of Ember', partOfSpeech: 'noun', definition: 'the power to give orders', sentence: 'The mayor held great authority in the city.' },
+      { word: 'surge', book: 'City of Ember', partOfSpeech: 'verb/noun', definition: 'a sudden powerful forward or upward movement', sentence: 'A surge of hope filled the people.' },
+      { word: 'pluck', book: 'City of Ember', partOfSpeech: 'verb', definition: 'to pull something quickly or courage', sentence: 'She showed great pluck in her adventure.' },
+      { word: 'frantic', book: 'City of Ember', partOfSpeech: 'adjective', definition: 'wild with worry or fear', sentence: 'The search became frantic as time ran out.' },
+
+      // The Rifle
+      { word: 'gunsmith', book: 'The Rifle', partOfSpeech: 'noun', definition: 'a person who makes or repairs guns', sentence: 'Cornish was a skilled gunsmith.' },
+      { word: 'chastened', book: 'The Rifle', partOfSpeech: 'adjective', definition: 'humbled or made to feel ashamed', sentence: 'He felt chastened after the mistake.' },
+      { word: 'ridicule', book: 'The Rifle', partOfSpeech: 'verb/noun', definition: 'to mock or make fun of', sentence: 'They began to ridicule his ideas.' },
+      { word: 'anxious', book: 'The Rifle', partOfSpeech: 'adjective', definition: 'worried or uneasy', sentence: 'Tim felt anxious about the rifle.' },
+      { word: 'loyalist', book: 'The Rifle', partOfSpeech: 'noun', definition: 'a person loyal to the king during the Revolution', sentence: 'Some loyalists remained in the area.' },
+      { word: 'independence', book: 'The Rifle', partOfSpeech: 'noun', definition: 'freedom from control', sentence: 'The colonies fought for independence.' },
+      { word: 'chafed', book: 'The Rifle', partOfSpeech: 'verb', definition: 'to become irritated or impatient', sentence: 'He chafed under the restrictions.' },
+      { word: 'attuned', book: 'The Rifle', partOfSpeech: 'adjective', definition: 'in harmony or sensitive to', sentence: 'He became attuned to the rifle’s feel.' },
+      { word: 'despondency', book: 'The Rifle', partOfSpeech: 'noun', definition: 'a state of low spirits', sentence: 'Despondency settled over the family.' },
+      { word: 'beacon', book: 'The Rifle', partOfSpeech: 'noun', definition: 'a guiding light or signal', sentence: 'The rifle became a beacon of history.' },
+
+      // Sammy Keyes
+      { word: 'buffoon', book: 'Sammy Keyes and the Hotel Thief', partOfSpeech: 'noun', definition: 'a foolish or stupid person', sentence: 'The man acted like a buffoon.' },
+      { word: 'dumbfounded', book: 'Sammy Keyes and the Hotel Thief', partOfSpeech: 'adjective', definition: 'so shocked that one is unable to speak', sentence: 'Sammy was dumbfounded by what she saw.' },
+      { word: 'apparently', book: 'Sammy Keyes and the Hotel Thief', partOfSpeech: 'adverb', definition: 'as far as one knows or can see', sentence: 'Apparently the thief was still in the building.' },
+      { word: 'subsidized', book: 'Sammy Keyes and the Hotel Thief', partOfSpeech: 'adjective', definition: 'supported financially', sentence: 'The apartment was subsidized housing.' },
+      { word: 'converted', book: 'Sammy Keyes and the Hotel Thief', partOfSpeech: 'adjective', definition: 'changed in form or function', sentence: 'The hotel had been converted into apartments.' },
+      { word: 'ruckus', book: 'Sammy Keyes and the Hotel Thief', partOfSpeech: 'noun', definition: 'a disturbance or commotion', sentence: 'A loud ruckus came from the hallway.' },
+      { word: 'distract', book: 'Sammy Keyes and the Hotel Thief', partOfSpeech: 'verb', definition: 'to draw attention away', sentence: 'She tried to distract the guard.' },
+      { word: 'bogus', book: 'Sammy Keyes and the Hotel Thief', partOfSpeech: 'adjective', definition: 'not genuine or fake', sentence: 'The story sounded completely bogus.' },
+      { word: 'gnash', book: 'Sammy Keyes and the Hotel Thief', partOfSpeech: 'verb', definition: 'to grind one’s teeth in anger', sentence: 'He would gnash his teeth in frustration.' },
+      { word: 'snub', book: 'Sammy Keyes and the Hotel Thief', partOfSpeech: 'verb', definition: 'to reject or ignore rudely', sentence: 'She decided not to snub her friends.' },
+
+      // Smiles to Go
+      { word: 'tinkering', book: 'Smiles to Go', partOfSpeech: 'verb', definition: 'making small changes to repair or improve', sentence: 'Will loved tinkering with gadgets.' },
+      { word: 'soldering', book: 'Smiles to Go', partOfSpeech: 'verb', definition: 'joining metal with melted solder', sentence: 'He was soldering wires together.' },
+      { word: 'warded', book: 'Smiles to Go', partOfSpeech: 'adjective', definition: 'protected or guarded', sentence: 'The area was warded off.' },
+      { word: 'regress', book: 'Smiles to Go', partOfSpeech: 'verb', definition: 'to return to a less developed state', sentence: 'He tried not to regress in his skills.' },
+      { word: 'zonked', book: 'Smiles to Go', partOfSpeech: 'adjective', definition: 'exhausted or heavily drugged', sentence: 'He was completely zonked after the game.' },
+      { word: 'ballistic', book: 'Smiles to Go', partOfSpeech: 'adjective', definition: 'very angry or relating to projectiles', sentence: 'She went ballistic when she found out.' },
+      { word: 'banshee', book: 'Smiles to Go', partOfSpeech: 'noun', definition: 'a female spirit whose wail warns of death', sentence: 'She screamed like a banshee.' },
+      { word: 'sedated', book: 'Smiles to Go', partOfSpeech: 'adjective', definition: 'given a sedative to calm down', sentence: 'The patient was sedated.' },
+      { word: 'ventilator', book: 'Smiles to Go', partOfSpeech: 'noun', definition: 'a machine that helps breathing', sentence: 'He was put on a ventilator.' },
+      { word: 'jabbering', book: 'Smiles to Go', partOfSpeech: 'verb', definition: 'talking rapidly and excitedly', sentence: 'They were jabbering nonstop.' },
+      { word: 'proton', book: 'Smiles to Go', partOfSpeech: 'noun', definition: 'a positively charged particle in an atom', sentence: 'Protons are in the nucleus.' },
+      { word: 'dormer', book: 'Smiles to Go', partOfSpeech: 'noun', definition: 'a window set into a sloping roof', sentence: 'The dormer gave extra light to the room.' },
+      { word: 'impulsive', book: 'Smiles to Go', partOfSpeech: 'adjective', definition: 'acting without thinking', sentence: 'His impulsive decision caused trouble.' },
+      { word: 'exotic', book: 'Smiles to Go', partOfSpeech: 'adjective', definition: 'unusual and exciting', sentence: 'She had exotic tastes in music.' },
+
+      // Time Travelling with a Hamster
+      { word: 'ceremoniously', book: 'Time Travelling with a Hamster', partOfSpeech: 'adverb', definition: 'in a formal or ritual way', sentence: 'He placed the time machine ceremoniously.' },
+      { word: 'syndactyly', book: 'Time Travelling with a Hamster', partOfSpeech: 'noun', definition: 'a condition where fingers or toes are joined', sentence: 'The doctor noted syndactyly.' },
+      { word: 'careening', book: 'Time Travelling with a Hamster', partOfSpeech: 'verb', definition: 'moving swiftly and erratically', sentence: 'The car was careening down the road.' },
+      { word: 'desiccant', book: 'Time Travelling with a Hamster', partOfSpeech: 'noun', definition: 'a substance that absorbs moisture', sentence: 'He used a desiccant packet.' },
+      { word: 'imbued', book: 'Time Travelling with a Hamster', partOfSpeech: 'verb', definition: 'inspired or filled with a feeling', sentence: 'The room was imbued with memories.' },
+      { word: 'creosote', book: 'Time Travelling with a Hamster', partOfSpeech: 'noun', definition: 'a dark oily liquid used as preservative', sentence: 'The wood smelled of creosote.' },
+      { word: 'Diwali', book: 'Time Travelling with a Hamster', partOfSpeech: 'noun', definition: 'Hindu festival of lights', sentence: 'They celebrated Diwali together.' },
+      { word: 'plausible', book: 'Time Travelling with a Hamster', partOfSpeech: 'adjective', definition: 'seeming reasonable or probable', sentence: 'His explanation sounded plausible.' },
+      { word: 'kerfuffle', book: 'Time Travelling with a Hamster', partOfSpeech: 'noun', definition: 'a commotion or fuss', sentence: 'There was a big kerfuffle at the beach.' },
+      { word: 'clairvoyance', book: 'Time Travelling with a Hamster', partOfSpeech: 'noun', definition: 'the ability to see the future', sentence: 'He wished he had clairvoyance.' },
+      { word: 'angst', book: 'Time Travelling with a Hamster', partOfSpeech: 'noun', definition: 'a feeling of deep anxiety', sentence: 'Al felt a lot of angst about the mission.' },
+      { word: 'multitudinous', book: 'Time Travelling with a Hamster', partOfSpeech: 'adjective', definition: 'very numerous', sentence: 'There were multitudinous stars in the sky.' },
+
+      // The Winter Room
+      { word: 'silage', book: 'The Winter Room', partOfSpeech: 'noun', definition: 'green fodder stored for livestock', sentence: 'They stored silage for the winter.' },
+      { word: 'granary', book: 'The Winter Room', partOfSpeech: 'noun', definition: 'a building for storing grain', sentence: 'The granary was full after harvest.' },
+      { word: 'harrow', book: 'The Winter Room', partOfSpeech: 'noun/verb', definition: 'a tool to break up soil', sentence: 'They used the harrow in spring.' },
+      { word: 'thaw', book: 'The Winter Room', partOfSpeech: 'verb/noun', definition: 'to melt ice or snow', sentence: 'The thaw finally came in April.' },
+      { word: 'burnish', book: 'The Winter Room', partOfSpeech: 'verb', definition: 'to polish by rubbing', sentence: 'He would burnish the tools.' },
+      { word: 'posse', book: 'The Winter Room', partOfSpeech: 'noun', definition: 'a group of people with a common purpose', sentence: 'A posse went after the thief.' },
+      { word: 'plowshares', book: 'The Winter Room', partOfSpeech: 'noun', definition: 'the cutting blade of a plow', sentence: 'They beat swords into plowshares.' },
+      { word: 'flank', book: 'The Winter Room', partOfSpeech: 'noun', definition: 'the side of something', sentence: 'They worked on the flank of the barn.' },
+      { word: 'clout', book: 'The Winter Room', partOfSpeech: 'noun', definition: 'influence or a heavy blow', sentence: 'Uncle David had a lot of clout.' },
+
+      // Woodsong
+      { word: 'paradox', book: 'Woodsong', partOfSpeech: 'noun', definition: 'a seemingly contradictory statement', sentence: 'Nature is full of paradox.' },
+      { word: 'pelt', book: 'Woodsong', partOfSpeech: 'noun/verb', definition: 'animal skin or to bombard', sentence: 'The wolf had a thick pelt.' },
+      { word: 'passive', book: 'Woodsong', partOfSpeech: 'adjective', definition: 'accepting what happens without resistance', sentence: 'He remained passive during the event.' },
+      { word: 'terrain', book: 'Woodsong', partOfSpeech: 'noun', definition: 'a stretch of land', sentence: 'The terrain was very difficult.' },
+      { word: 'lope', book: 'Woodsong', partOfSpeech: 'verb', definition: 'to run with long bounding strides', sentence: 'The wolf began to lope.' },
+      { word: 'genetic', book: 'Woodsong', partOfSpeech: 'adjective', definition: 'relating to genes or heredity', sentence: 'Some traits are genetic.' },
+      { word: 'gully', book: 'Woodsong', partOfSpeech: 'noun', definition: 'a narrow ravine', sentence: 'The sled went down the gully.' },
+      { word: 'organic', book: 'Woodsong', partOfSpeech: 'adjective', definition: 'relating to living matter', sentence: 'He preferred organic methods.' },
+      { word: 'predator', book: 'Woodsong', partOfSpeech: 'noun', definition: 'an animal that hunts others', sentence: 'Wolves are natural predators.' },
+      { word: 'invert', book: 'Woodsong', partOfSpeech: 'verb', definition: 'to turn upside down', sentence: 'He would invert the sled.' },
+      { word: 'chagrin', book: 'Woodsong', partOfSpeech: 'noun', definition: 'annoyance or distress', sentence: 'To his chagrin, he made a mistake.' },
+      { word: 'carcass', book: 'Woodsong', partOfSpeech: 'noun', definition: 'the dead body of an animal', sentence: 'They found the carcass in the woods.' },
+      { word: 'alleviate', book: 'Woodsong', partOfSpeech: 'verb', definition: 'to make suffering less severe', sentence: 'The medicine helped alleviate pain.' },
+      { word: 'melancholy', book: 'Woodsong', partOfSpeech: 'noun/adjective', definition: 'a feeling of pensive sadness', sentence: 'A melancholy settled over the trail.' }
     ];
 
     const els = {
@@ -424,8 +509,7 @@
       reviewList: document.getElementById('reviewList')
     };
 
-    const STORAGE_KEY = 'audrey-vocab-progress-v1';
-
+    const STORAGE_KEY = 'audrey-vocab-progress-v2';
     const state = {
       deck: [],
       currentIndex: 0,
@@ -463,9 +547,15 @@
 
     function getFilteredWords() {
       const selectedBook = els.bookFilter.value;
-      const words = selectedBook === 'all'
-        ? VOCAB
-        : VOCAB.filter(item => item.book === selectedBook);
+      let words = VOCAB;
+      if (selectedBook === 'Summer Homework') {
+        words = VOCAB.filter(item => 
+          ['City of Ember','The Rifle','Sammy Keyes and the Hotel Thief','Smiles to Go',
+           'Time Travelling with a Hamster','The Winter Room','Woodsong'].includes(item.book)
+        );
+      } else if (selectedBook !== 'all') {
+        words = VOCAB.filter(item => item.book === selectedBook);
+      }
       return shuffle(words);
     }
 
@@ -497,10 +587,9 @@
           explain: `${word.word} is a ${word.partOfSpeech}. It means: ${word.definition}`
         };
       }
-
       if (actualMode === 'partOfSpeech') {
         const allPos = ['noun', 'verb', 'adjective', 'adverb'];
-        const correctPos = word.partOfSpeech.toLowerCase();
+        const correctPos = word.partOfSpeech.toLowerCase().split('/')[0];
         const choices = shuffle(Array.from(new Set([correctPos, ...allPos])).slice(0, 4));
         return {
           type: 'Part of Speech',
@@ -512,7 +601,6 @@
           explain: `${word.word} is used as a ${word.partOfSpeech}.`
         };
       }
-
       if (actualMode === 'context') {
         const blankSentence = word.sentence.replace(new RegExp(word.word, 'i'), '_____');
         const choices = shuffle([
@@ -529,7 +617,6 @@
           explain: `The best answer is “${word.word}” because it fits the sentence meaning.`
         };
       }
-
       if (actualMode === 'sentence') {
         const correctSentence = word.sentence;
         const wrongPool = sampleOtherWords(pool, word, 3);
@@ -547,7 +634,6 @@
           explain: `Correct use: ${correctSentence}`
         };
       }
-
       return {
         type: 'Spelling Check',
         word: word.word,
@@ -612,33 +698,25 @@
     function renderQuestion() {
       updateStats();
       resetAnswerUI();
-
       if (!state.deck.length) {
         els.questionType.textContent = 'Ready';
         els.questionWord.textContent = 'Press “Start New Practice”';
         els.questionPrompt.textContent = 'Choose a book set and practice mode to begin.';
         return;
       }
-
       if (state.currentIndex >= state.deck.length) {
         const accuracy = state.answered ? Math.round((state.score / state.answered) * 100) : 0;
         els.questionType.textContent = 'Finished';
         els.questionWord.textContent = 'Practice Complete';
         els.questionPrompt.innerHTML = `You got <strong>${state.score}</strong> out of <strong>${state.deck.length}</strong> correct. Final accuracy: <strong>${accuracy}%</strong>. Press Restart to practice again.`;
-        if (!state.missed.length) {
-          showFeedback('good', '<strong>Amazing job!</strong><br>You did not miss any words this round.');
-        }
         return;
       }
-
       const word = state.deck[state.currentIndex];
       const pool = state.deck.length >= 4 ? state.deck : VOCAB;
       state.currentQuestion = buildQuestion(word, pool);
-
       els.questionType.textContent = state.currentQuestion.type;
       els.questionWord.textContent = word.word;
       els.questionPrompt.textContent = state.currentQuestion.prompt;
-
       if (state.currentQuestion.mode === 'choice') {
         state.currentQuestion.choices.forEach(choice => {
           const btn = document.createElement('button');
@@ -674,7 +752,6 @@
       const allButtons = Array.from(document.querySelectorAll('.choice-btn'));
       allButtons.forEach(btn => btn.disabled = true);
       const isCorrect = choice === state.currentQuestion.correct;
-
       if (isCorrect) {
         handleCorrect();
         buttonEl.classList.add('correct');
@@ -686,7 +763,6 @@
         if (correctBtn) correctBtn.classList.add('correct');
         showFeedback('bad', `<strong>Not quite.</strong><br>${state.currentQuestion.explain}`);
       }
-
       els.nextBtn.disabled = false;
     }
 
@@ -699,18 +775,15 @@
       const word = state.deck[state.currentIndex];
       const guess = normalizeWord(els.spellingInput.value);
       const correct = normalizeWord(state.currentQuestion.correct);
-
       els.spellingInput.disabled = true;
       els.checkSpellingBtn.disabled = true;
       els.showWordBtn.disabled = true;
-
       if (reveal) {
         handleWrong(word);
         showFeedback('note', `<strong>Word shown:</strong> ${state.currentQuestion.correct}<br>${state.currentQuestion.explain}`);
         els.nextBtn.disabled = false;
         return;
       }
-
       if (guess === correct) {
         handleCorrect();
         showFeedback('good', `<strong>Correct spelling!</strong><br>${state.currentQuestion.explain}`);
@@ -742,6 +815,7 @@
       showFeedback('note', '<strong>Progress cleared.</strong><br>Best streak has been reset.');
     }
 
+    // Event listeners
     els.startBtn.addEventListener('click', startPractice);
     els.restartBtn.addEventListener('click', startPractice);
     els.nextBtn.addEventListener('click', () => {
